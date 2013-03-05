@@ -1,0 +1,50 @@
+{
+  "result": {
+    "status": "Pending",
+    "owner": {
+      "nickname": "api-tests@groupdocs.com",
+      "firstname": "sadfg",
+      "lastname": "asdfg",
+      "pkey": null,
+      "pswd_salt": null,
+      "claimed_id": null,
+      "token": null,
+      "storage": null,
+      "photo": null,
+      "active": null,
+      "trial": null,
+      "news_eanbled": null,
+      "alerts_eanbled": null,
+      "support_eanbled": null,
+      "support_email": null,
+      "annotation_branded": null,
+      "viewer_branded": null,
+      "signedupOn": 0,
+      "signedinOn": 0,
+      "signin_count": null,
+      "roles": null,
+      "id": 167,
+      "guid": "ea103bbe8cb8ce07",
+      "primary_email": null
+    },
+    "sharers": [
+
+    ],
+    "shared_on": 0,
+    "name": "document_one.doc",
+    "version": 1,
+    "size": 9216,
+    "type": "Words",
+    "type_str": "Words",
+    "file_type_str": "Doc",
+    "document_path": null,
+    "access": "Private",
+    "url": "https://dev-api.groupdocs.com/v2.0/shared/files/5387f519b47c3438673b5e6f98d19f85bc1fa53c2cdba97433d705d9af77a962",
+    "file_type": "Doc",
+    "id": 157119,
+    "guid": "5387f519b47c3438673b5e6f98d19f85bc1fa53c2cdba97433d705d9af77a962"
+  },
+  "status": "Ok",
+  "error_message": null,
+  "composedOn": 1358755721135
+}

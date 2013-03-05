@@ -1,0 +1,17 @@
+{
+  "id": 7443,
+  "guid": "ea089ef9235ef654ae1ec2ae22fd0f55",
+  "collector_id": 5300,
+  "collector_guid": "53806415205c8d093e198a06070b6ce9",
+  "questionnaire_name": "Test Questionnaire",
+  "status": "Submitted",
+  "executive": {
+    "primary_email": "user_two@nonexistent.com"
+  },
+  "owner": {
+    "primary_email": "user_two@nonexistent.com"
+  },
+  "approver": {
+    "primary_email": "user_two@nonexistent.com"
+  }
+}

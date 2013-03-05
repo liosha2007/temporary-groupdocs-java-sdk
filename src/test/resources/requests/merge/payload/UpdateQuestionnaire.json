@@ -1,0 +1,25 @@
+{
+  "name": "New Questionnaire",
+  "descr": "New Questionnaire Description",
+  "pages": [
+    {
+      "number": 2,
+      "title": "Page1",
+      "questions": [
+        {
+          "field": "Field1",
+          "text": "Text1",
+          "def_answer": "Answer1",
+          "type": "GenericText",
+          "answers": [
+            {
+              "text": "Text1",
+              "value": "Value1"
+            }
+          ],
+          "required": true
+        }
+      ]
+    }
+  ]
+}

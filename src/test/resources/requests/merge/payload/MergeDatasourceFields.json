@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Field Name",
+    "type": "Text",
+    "values": [
+      "Value1",
+      "Value2"
+    ]
+  }
+]

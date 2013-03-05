@@ -1,0 +1,18 @@
+{
+  "result": {
+    "questionnaire": {
+      "id": 31826,
+      "guid": "c9e807d978d1a11409e6fc2a1bf8e781",
+      "name": "Test Questionnaire",
+      "descr": "Test Questionnaire Description",
+      "status": "Ready",
+      "assigned_questions": 1,
+      "total_questions": 1,
+      "modified": 1358756877400,
+      "expires": 0
+    }
+  },
+  "status": "Ok",
+  "error_message": null,
+  "composedOn": 1358756878166
+}

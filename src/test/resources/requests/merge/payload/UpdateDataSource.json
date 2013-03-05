@@ -1,0 +1,14 @@
+{
+  "questionnaire_id": 31834,
+  "descr": "Datasource description",
+  "fields": [
+    {
+      "name": "Field Name",
+      "type": "Text",
+      "values": [
+        "Value1",
+        "Value2"
+      ]
+    }
+  ]
+}

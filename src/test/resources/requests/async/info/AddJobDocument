@@ -1,0 +1,6 @@
+PUT /v2.0/async/ea103bbe8cb8ce07/jobs/383539/files/37397dd0cdd5f2c425d51b8c87351a1818d3d0b6f23873d4944aa6418a4c2428?signature=5%2FQJvhdcyvPPwr2YGSx6nrEdy5g
+
+Host: dev-api.groupdocs.com
+Accept: application/json
+Content-Length: 0
+Groupdocs-Referrer: ruby/1.2.0

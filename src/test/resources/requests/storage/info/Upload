@@ -1,0 +1,6 @@
+POST /v2.0/storage/ea103bbe8cb8ce07/folders/document_one.doc.docx?signature=BiszuOcdNH5r7E0tjTrawYecz3c
+
+Host: dev-api.groupdocs.com
+Accept: application/json
+Content-Length: 0
+Groupdocs-Referrer: ruby/1.2.0

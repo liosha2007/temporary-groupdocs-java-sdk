@@ -1,0 +1,7 @@
+PUT /v2.0/async/ea103bbe8cb8ce07/jobs/384628?signature=J4pdPuD7SsfQ70xYgEkFRFDkJEA
+
+Host: dev-api.groupdocs.com
+Accept: application/json
+Content-Length: 22
+Groupdocs-Referrer: ruby/1.2.0
+Content-Type: application/json

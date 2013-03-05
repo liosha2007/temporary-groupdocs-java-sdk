@@ -1,0 +1,32 @@
+{
+  "result": {
+    "questionnaire_guid": null,
+    "executions": [
+      {
+        "status": "Draft",
+        "guid": "a3ad12e9ff450fc111addff7bf5fbf0c",
+        "collector_id": 5262,
+        "collector_guid": "b69dd38a7b850597d89df0b9950a0ed2",
+        "questionnaire_name": "Test Questionnaire",
+        "owner": {
+          "id": 167,
+          "guid": "ea103bbe8cb8ce07",
+          "primary_email": "api-tests@groupdocs.com"
+        },
+        "executive": {
+          "id": 167,
+          "guid": "ea103bbe8cb8ce07",
+          "primary_email": "api-tests@groupdocs.com"
+        },
+        "approver": null,
+        "datasource_id": null,
+        "id": 7410,
+        "modified": 1358756661603,
+        "document": null
+      }
+    ]
+  },
+  "status": "Ok",
+  "error_message": null,
+  "composedOn": 1358756661916
+}

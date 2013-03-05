@@ -1,0 +1,6 @@
+GET /v2.0/mgmt/faa5c82daad84030/users/ea103bbe8cb8ce07/roles?signature=VMcuy7k6G1mx9A2pQF5PSMCB8XM
+
+Host: dev-api.groupdocs.com
+Accept: application/json
+Content-Length: 0
+Groupdocs-Referrer: ruby/1.2.0

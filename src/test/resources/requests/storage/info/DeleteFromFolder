@@ -1,0 +1,6 @@
+DELETE /v2.0/storage/ea103bbe8cb8ce07/folders/Folder-8461183319081756?signature=M1R%2F9JBJI1AU%2BxcddYnatWD24Vw
+
+Host: dev-api.groupdocs.com
+Accept: application/json
+Content-Length: 0
+Groupdocs-Referrer: ruby/1.2.0

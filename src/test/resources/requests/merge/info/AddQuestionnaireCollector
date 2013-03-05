@@ -1,0 +1,7 @@
+POST /v2.0/merge/ea103bbe8cb8ce07/questionnaires/54f6686e795e87b2ea939d9177f2c663/collectors?signature=aFs2Z7QlHBP22KcECYgetHwnUJ8
+
+Host: dev-api.groupdocs.com
+Accept: application/json
+Content-Length: 375
+Groupdocs-Referrer: ruby/1.2.0
+Content-Type: application/json

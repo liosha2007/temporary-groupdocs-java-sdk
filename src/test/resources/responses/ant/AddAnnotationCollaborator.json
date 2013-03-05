@@ -1,0 +1,31 @@
+{
+  "result": {
+    "documentGuid": "22cf915565bc37c82779345c4a4d5ee336594868ce2b07ec6b441f329771a669",
+    "sessionGuid": "d0fecf3cb66a67b2",
+    "owner": {
+      "id": 167,
+      "guid": "ea103bbe8cb8ce07",
+      "primary_email": "api-tests@groupdocs.com",
+      "firstName": "sadfg",
+      "lastName": "asdfg",
+      "access_rights": null,
+      "color": null,
+      "customEmailMessage": null
+    },
+    "collaborators": [
+      {
+        "id": 7760,
+        "guid": "c5bdd25f9d8b36fd",
+        "primary_email": "user_one@mailinator.com",
+        "firstName": "John",
+        "lastName": "Smith",
+        "access_rights": 15,
+        "color": 1201033,
+        "customEmailMessage": null
+      }
+    ]
+  },
+  "status": "Ok",
+  "error_message": null,
+  "composedOn": 1358748612901
+}

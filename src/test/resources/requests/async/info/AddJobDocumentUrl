@@ -1,0 +1,6 @@
+PUT /v2.0/async/ea103bbe8cb8ce07/jobs/383543/urls?absolute_url=http://www.google.com&signature=JkjZYUJTL1z%2FlvtKRK58xiRbseA
+
+Host: dev-api.groupdocs.com
+Accept: application/json
+Content-Length: 0
+Groupdocs-Referrer: ruby/1.2.0

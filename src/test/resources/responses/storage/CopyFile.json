@@ -1,0 +1,35 @@
+{
+  "result": {
+    "src_file": {
+      "name": "document_one.doc",
+      "version": 1,
+      "size": 9216,
+      "type": "Words",
+      "type_str": "Words",
+      "file_type_str": "Doc",
+      "document_path": "document_one.doc",
+      "access": "Private",
+      "url": "https://dev-api.groupdocs.com/v2.0/shared/files/5d023bea5a64f21b7c5f305ba82a140f4ffac3c9ca41980e018c7f172ba4cc3b",
+      "file_type": "Doc",
+      "id": 157356,
+      "guid": "5d023bea5a64f21b7c5f305ba82a140f4ffac3c9ca41980e018c7f172ba4cc3b"
+    },
+    "dst_file": {
+      "name": "document_two_9480533803577094.doc",
+      "version": 1,
+      "size": 9216,
+      "type": "Words",
+      "type_str": "Words",
+      "file_type_str": "Doc",
+      "document_path": "document_two_9480533803577094.doc",
+      "access": "Private",
+      "url": "https://dev-api.groupdocs.com/v2.0/shared/files/6f723087f82e27aa254f204a35b2416f3accd50cc263f4f0072660bfdcb72092",
+      "file_type": "Doc",
+      "id": 157357,
+      "guid": "6f723087f82e27aa254f204a35b2416f3accd50cc263f4f0072660bfdcb72092"
+    }
+  },
+  "status": "Ok",
+  "error_message": null,
+  "composedOn": 1358757266948
+}

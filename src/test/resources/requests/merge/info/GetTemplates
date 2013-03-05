@@ -1,0 +1,6 @@
+GET /v2.0/merge/ea103bbe8cb8ce07/templates?signature=VA2SDPAWo4jQZbNoGYn78yhz17o
+
+Host: dev-api.groupdocs.com
+Accept: application/json
+Content-Length: 0
+Groupdocs-Referrer: ruby/1.2.0

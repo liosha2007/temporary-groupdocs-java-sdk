@@ -1,0 +1,6 @@
+DELETE /v2.0/async/ea103bbe8cb8ce07/jobs/384611/documents/fab285f51630e7f2d5bddb8d3e193c1d88f015551441d6d1e029145d5144c628?signature=Iu21RVup0NSQlPPF1kFRLp%2Bc1Mc
+
+Host: dev-api.groupdocs.com
+Accept: application/json
+Content-Length: 0
+Groupdocs-Referrer: ruby/1.2.0

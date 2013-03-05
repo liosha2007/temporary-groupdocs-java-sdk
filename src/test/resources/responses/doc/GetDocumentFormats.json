@@ -1,0 +1,25 @@
+{
+  "result": {
+    "types": [
+      "Doc",
+      "Docx",
+      "Docm",
+      "Dot",
+      "Dotx",
+      "Dotm",
+      "Rtf",
+      "Odt",
+      "Ott",
+      "Txt",
+      "Html",
+      "Pdf",
+      "Tiff",
+      "Xps",
+      "Epub",
+      "Jpeg"
+    ]
+  },
+  "status": "Ok",
+  "error_message": null,
+  "composedOn": 1358755737948
+}

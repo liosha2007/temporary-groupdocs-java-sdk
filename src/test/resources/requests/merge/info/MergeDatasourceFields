@@ -1,0 +1,7 @@
+POST /v2.0/merge/ea103bbe8cb8ce07/files/a2bc683849f0d28eed4fc7f8342daf352076dfcd85b8d6dcf367e060ed3649d6/datasources?signature=y%2F3R78thS%2FCIOF%2FI38n1wsHcnwA
+
+Host: dev-api.groupdocs.com
+Accept: application/json
+Content-Length: 66
+Groupdocs-Referrer: ruby/1.2.0
+Content-Type: application/json

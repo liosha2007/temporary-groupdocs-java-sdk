@@ -1,0 +1,6 @@
+PUT /v2.0/storage/ea103bbe8cb8ce07/trash/document_one.doc?signature=Fi0TY6xMnBAP%2BiUOIYrkIYVRxk0
+
+Host: dev-api.groupdocs.com
+Accept: application/json
+Content-Length: 0
+Groupdocs-Referrer: ruby/1.2.0

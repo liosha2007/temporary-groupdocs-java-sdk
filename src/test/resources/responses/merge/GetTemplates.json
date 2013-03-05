@@ -1,0 +1,15 @@
+{
+  "result": {
+    "templates": [
+      {
+        "name": "document_one_with_fields.pdf",
+        "field_count": 42,
+        "id": 157279,
+        "guid": "8ebe6061b36dc8e8649982fc55d73a8f4a8927310babaaa7e0f955c3244fac0f"
+      }
+    ]
+  },
+  "status": "Ok",
+  "error_message": null,
+  "composedOn": 1358756898745
+}

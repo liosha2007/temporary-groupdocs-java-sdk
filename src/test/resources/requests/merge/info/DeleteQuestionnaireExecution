@@ -1,0 +1,6 @@
+DELETE /v2.0/merge/ea103bbe8cb8ce07/questionnaires/executions/7405?signature=GXYvJW%2BSxIhfaKzBvbx2OPNYTUY
+
+Host: dev-api.groupdocs.com
+Accept: application/json
+Content-Length: 0
+Groupdocs-Referrer: ruby/1.2.0

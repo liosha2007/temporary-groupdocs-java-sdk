@@ -1,0 +1,19 @@
+{
+  "result": {
+    "collectors": [
+      {
+        "id": 5259,
+        "guid": "c91965a3d098a16da0abb0102bef67d6",
+        "type": "Link",
+        "status": "Active",
+        "questionnaire_id": 31779,
+        "resolved_exectuions": 0,
+        "emails": null,
+        "modified": 1358756574293
+      }
+    ]
+  },
+  "status": "Ok",
+  "error_message": null,
+  "composedOn": 1358756574557
+}
