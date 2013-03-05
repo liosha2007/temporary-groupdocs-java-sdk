@@ -1,6 +1,0 @@
-GET /v2.0/mgmt/ea103bbe8cb8ce07/storages?signature=m6hjmFyiYFDQFzTxJYJDRfXr8bQ
-
-Host: dev-api.groupdocs.com
-Accept: application/json
-Content-Length: 0
-Groupdocs-Referrer: ruby/1.2.0

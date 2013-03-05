@@ -1,6 +1,0 @@
-POST /v2.0/storage/ea103bbe8cb8ce07/urls?url=http://www.google.com&signature=wv%2FOFviQb63HXhCRbcCe7puJ%2BdM
-
-Host: dev-api.groupdocs.com
-Accept: application/json
-Content-Length: 0
-Groupdocs-Referrer: ruby/1.2.0

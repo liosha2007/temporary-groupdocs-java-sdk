@@ -21,7 +21,7 @@ import com.groupdocs.sdk.common.FileStream;
 import java.util.*;
 
 public class SharedApi {
-  String basePath = "https://api.groupdocs.com/v2.0";
+  String basePath = "https://dev-api.groupdocs.com/v2.0";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public ApiInvoker getInvoker() {
@@ -38,7 +38,7 @@ public class SharedApi {
 
   public FileStream Download (String guid, String fileName, Boolean render) throws ApiException {
     // verify required params are set
-    if(guid == null ) {
+    if(guid == null || fileName == null ) {
        throw new ApiException(400, "missing required params");
     }
     String resourcePath = "/shared/files/{guid}?filename={fileName}&render={render}".replace("*", "");

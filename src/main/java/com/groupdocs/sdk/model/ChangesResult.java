@@ -25,12 +25,44 @@ import com.groupdocs.sdk.model.ChangeInfo;
  */
 public class ChangesResult {
   private String result_file_Id = null;
+  private String source_file_Id = null;
+  private String target_file_Id = null;
+  private String source_file_name = null;
+  private String target_file_name = null;
   private List<ChangeInfo> changes = new ArrayList<ChangeInfo>();
   public String getResult_file_Id() {
     return result_file_Id;
   }
   public void setResult_file_Id(String result_file_Id) {
     this.result_file_Id = result_file_Id;
+  }
+
+  public String getSource_file_Id() {
+    return source_file_Id;
+  }
+  public void setSource_file_Id(String source_file_Id) {
+    this.source_file_Id = source_file_Id;
+  }
+
+  public String getTarget_file_Id() {
+    return target_file_Id;
+  }
+  public void setTarget_file_Id(String target_file_Id) {
+    this.target_file_Id = target_file_Id;
+  }
+
+  public String getSource_file_name() {
+    return source_file_name;
+  }
+  public void setSource_file_name(String source_file_name) {
+    this.source_file_name = source_file_name;
+  }
+
+  public String getTarget_file_name() {
+    return target_file_name;
+  }
+  public void setTarget_file_name(String target_file_name) {
+    this.target_file_name = target_file_name;
   }
 
   public List<ChangeInfo> getChanges() {
@@ -45,6 +77,10 @@ public class ChangesResult {
     StringBuilder sb = new StringBuilder();
     sb.append("class ChangesResult {\n");
     sb.append("  result_file_Id: ").append(result_file_Id).append("\n");
+    sb.append("  source_file_Id: ").append(source_file_Id).append("\n");
+    sb.append("  target_file_Id: ").append(target_file_Id).append("\n");
+    sb.append("  source_file_name: ").append(source_file_name).append("\n");
+    sb.append("  target_file_name: ").append(target_file_name).append("\n");
     sb.append("  changes: ").append(changes).append("\n");
     sb.append("}\n");
     return sb.toString();

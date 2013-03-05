@@ -15,15 +15,12 @@
  */
 package com.groupdocs.sdk.common;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.ParseException;
 
 import javax.ws.rs.core.MultivaluedMap;
-
-import org.apache.commons.io.IOUtils;
 
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.core.header.ContentDisposition;
@@ -96,14 +93,6 @@ public class FileStream {
 
 	public void setContentType(String contentType) {
 		this.contentType = contentType;
-	}
-	
-	public byte[] toByteArray() {
-		try {
-			return IOUtils.toByteArray(inputStream);
-		} catch (IOException e) {
-			return null;
-		}
 	}
 
 }

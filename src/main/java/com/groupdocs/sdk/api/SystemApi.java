@@ -17,9 +17,11 @@ package com.groupdocs.sdk.api;
 
 import com.groupdocs.sdk.common.ApiException;
 import com.groupdocs.sdk.common.ApiInvoker;
+import com.groupdocs.sdk.model.BillingAddressInfo;
 import com.groupdocs.sdk.model.GetCountriesResponse;
 import com.groupdocs.sdk.model.GetPlanResponse;
 import com.groupdocs.sdk.model.SubscriptionPlanInfo;
+import com.groupdocs.sdk.model.GetBillingAddressResponse;
 import com.groupdocs.sdk.model.GetUserSubscriptionPlanResponse;
 import com.groupdocs.sdk.model.GetSubscriptionPlansResponse;
 import com.groupdocs.sdk.model.GetStatesResponse;
@@ -27,7 +29,7 @@ import com.groupdocs.sdk.model.SetUserSubscriptionPlanResponse;
 import java.util.*;
 
 public class SystemApi {
-  String basePath = "https://api.groupdocs.com/v2.0";
+  String basePath = "https://dev-api.groupdocs.com/v2.0";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public ApiInvoker getInvoker() {
@@ -107,7 +109,7 @@ public class SystemApi {
     if(callerId == null || family == null ) {
        throw new ApiException(400, "missing required params");
     }
-    String resourcePath = "/system/{callerId}/plans/{family}".replace("*", "");
+    String resourcePath = "/system/{callerId}/plans/{family}?invalidate={invalidate}".replace("*", "");
   	// create path and map variables
     resourcePath = resourcePath.replace("{format}","json").replace("{" + "callerId" + "}", String.valueOf(callerId)).replace("{" + "family" + "}", String.valueOf(family));
 
@@ -209,6 +211,36 @@ public class SystemApi {
       String response = apiInvoker.invokeAPI(basePath, resourcePath, "GET", queryParams, null, headerParams, String.class);
       if(response != null){
         return (GetStatesResponse) ApiInvoker.deserialize(response, "", GetStatesResponse.class);
+      }
+      else {
+        return null;
+      }
+      } catch (ApiException ex) {
+      if(ex.getCode() == 404) {
+      	return null;
+      }
+      else {
+        throw ex;
+      }
+    }
+  }
+  public GetBillingAddressResponse SetBillingAddress (String userId, BillingAddressInfo body) throws ApiException {
+    // verify required params are set
+    if(userId == null || body == null ) {
+       throw new ApiException(400, "missing required params");
+    }
+    String resourcePath = "/system/{userId}/billingaddress".replace("*", "");
+  	// create path and map variables
+    resourcePath = resourcePath.replace("{format}","json").replace("{" + "userId" + "}", String.valueOf(userId));
+
+    // query params
+    Map<String, String> queryParams = new HashMap<String, String>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, resourcePath, "PUT", queryParams, body, headerParams, String.class);
+      if(response != null){
+        return (GetBillingAddressResponse) ApiInvoker.deserialize(response, "", GetBillingAddressResponse.class);
       }
       else {
         return null;

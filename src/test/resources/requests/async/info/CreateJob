@@ -1,7 +1,0 @@
-POST /v2.0/async/ea103bbe8cb8ce07/jobs?signature=RcgLRdHEkWeIZzjqbNLfPWt8zPI
-
-Host: dev-api.groupdocs.com
-Accept: application/json
-Content-Length: 13
-Groupdocs-Referrer: ruby/1.2.0
-Content-Type: application/json

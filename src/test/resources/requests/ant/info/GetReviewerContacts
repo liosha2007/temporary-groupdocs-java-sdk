@@ -1,6 +1,0 @@
-GET /v2.0/ant/ea103bbe8cb8ce07/contacts?signature=caF8NGR%2FGsdegocHsU8KQgnEzWo
-
-Host: dev-api.groupdocs.com
-Accept: application/json
-Content-Length: 0
-Groupdocs-Referrer: ruby/1.2.0

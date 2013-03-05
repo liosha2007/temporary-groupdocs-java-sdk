@@ -1,7 +1,0 @@
-PUT /v2.0/ant/ea103bbe8cb8ce07/annotations/01c28f54278e74c6/markerPosition?signature=ejejof1GrcZQDCJ29IeiYFVd0%2Fc
-
-Host: dev-api.groupdocs.com
-Accept: application/json
-Content-Length: 18
-Groupdocs-Referrer: ruby/1.2.0
-Content-Type: application/json

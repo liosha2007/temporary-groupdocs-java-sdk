@@ -30,7 +30,7 @@ import com.groupdocs.sdk.model.CreatePackageResponse;
 import java.util.*;
 
 public class StorageApi {
-  String basePath = "https://api.groupdocs.com/v2.0";
+  String basePath = "https://dev-api.groupdocs.com/v2.0";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public ApiInvoker getInvoker() {
@@ -377,7 +377,7 @@ public class StorageApi {
       }
     }
   }
-  public FileMoveResponse MoveFile (String userId, String path, String mode, String Groupdocs_Copy, String Groupdocs_Move) throws ApiException {
+  public FileMoveResponse MoveFile (String userId, String path, String mode, String Groupdocs_Move, String Groupdocs_Copy) throws ApiException {
     // verify required params are set
     if(userId == null || path == null ) {
        throw new ApiException(400, "missing required params");
@@ -396,8 +396,8 @@ public class StorageApi {
 
     if(!"null".equals(String.valueOf(mode)))
       queryParams.put("mode", String.valueOf(mode));
-    headerParams.put("Groupdocs-Copy", Groupdocs_Copy);
     headerParams.put("Groupdocs-Move", Groupdocs_Move);
+    headerParams.put("Groupdocs-Copy", Groupdocs_Copy);
     try {
       String response = apiInvoker.invokeAPI(basePath, resourcePath, "PUT", queryParams, null, headerParams, String.class);
       if(response != null){

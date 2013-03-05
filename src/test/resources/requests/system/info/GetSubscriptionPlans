@@ -1,6 +1,0 @@
-GET /v2.0/system/faa5c82daad84030/plans/groupdocs?signature=T2INN2qxR7rdFdHFn2PPMc7TtPM
-
-Host: dev-api.groupdocs.com
-Accept: application/json
-Content-Length: 0
-Groupdocs-Referrer: ruby/1.2.0

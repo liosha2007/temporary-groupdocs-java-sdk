@@ -32,7 +32,7 @@ public class SignatureEnvelopeFieldInfo {
   private Double order = null;
   private String regularExpression = null;
   private String getDataFrom = null;
-  private String data = null;
+  private List<Integer> data = new ArrayList<Integer>();
   private String fillTimeStamp = null;
   private Double signatureFieldId = null;
   private List<SignatureEnvelopeFieldLocationInfo> locations = new ArrayList<SignatureEnvelopeFieldLocationInfo>();
@@ -96,10 +96,10 @@ public class SignatureEnvelopeFieldInfo {
     this.getDataFrom = getDataFrom;
   }
 
-  public String getData() {
+  public List<Integer> getData() {
     return data;
   }
-  public void setData(String data) {
+  public void setData(List<Integer> data) {
     this.data = data;
   }
 

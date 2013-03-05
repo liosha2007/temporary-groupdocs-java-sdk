@@ -1,6 +1,0 @@
-GET /v2.0/system/ea103bbe8cb8ce07/countries/Russia/states?signature=c30rf0G3y82BafVRYhQpiVFvvDs
-
-Host: dev-api.groupdocs.com
-Accept: application/json
-Content-Length: 0
-Groupdocs-Referrer: ruby/1.2.0

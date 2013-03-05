@@ -1,6 +1,0 @@
-POST /v2.0/storage/ea103bbe8cb8ce07/files/157354/archive/zip?signature=FR0iji7QbmgUfh5MtPa3BNlhxgs
-
-Host: dev-api.groupdocs.com
-Accept: application/json
-Content-Length: 0
-Groupdocs-Referrer: ruby/1.2.0

@@ -1,6 +1,0 @@
-GET /v2.0/doc/ea103bbe8cb8ce07/files/7d157f3af91b63f98e87848776d5c572520d2dff950b390490fb604ec94d3732/fields?include_geometry=true&signature=VvfCNzXU6gaawuu08VZNLl5ZFqk
-
-Host: dev-api.groupdocs.com
-Accept: application/json
-Content-Length: 0
-Groupdocs-Referrer: ruby/1.2.0

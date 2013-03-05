@@ -29,6 +29,7 @@ public class SignatureTemplateDocumentInfo {
   private String originalDocumentMD5 = null;
   private Integer originalDocumentPagesCount = null;
   private Integer fieldsCount = null;
+  private String originalDocumentId = null;
   public String getDocumentId() {
     return documentId;
   }
@@ -78,6 +79,13 @@ public class SignatureTemplateDocumentInfo {
     this.fieldsCount = fieldsCount;
   }
 
+  public String getOriginalDocumentId() {
+    return originalDocumentId;
+  }
+  public void setOriginalDocumentId(String originalDocumentId) {
+    this.originalDocumentId = originalDocumentId;
+  }
+
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
@@ -89,6 +97,7 @@ public class SignatureTemplateDocumentInfo {
     sb.append("  originalDocumentMD5: ").append(originalDocumentMD5).append("\n");
     sb.append("  originalDocumentPagesCount: ").append(originalDocumentPagesCount).append("\n");
     sb.append("  fieldsCount: ").append(fieldsCount).append("\n");
+    sb.append("  originalDocumentId: ").append(originalDocumentId).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

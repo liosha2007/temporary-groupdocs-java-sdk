@@ -32,7 +32,7 @@ public class UserInfo {
   private String claimed_id = null;
   private String token = null;
   private Integer storage = null;
-  private String photo = null;
+  private List<Integer> photo = new ArrayList<Integer>();
   private Boolean active = null;
   private Boolean trial = null;
   private Boolean news_eanbled = null;
@@ -41,6 +41,35 @@ public class UserInfo {
   private String support_email = null;
   private Boolean annotation_branded = null;
   private Boolean viewer_branded = null;
+  private Boolean is_real_time_broadcast_enabled = null;
+  private Boolean is_scroll_broadcast_enabled = null;
+  private Boolean is_zoom_broadcast_enabled = null;
+  private List<Integer> annotation_logo = new ArrayList<Integer>();
+  private List<Integer> pointer_tool_cursor = new ArrayList<Integer>();
+  private Integer annotation_header_options = null;
+  private Boolean is_annotation_navigation_widget_enabled = null;
+  private Boolean is_annotation_zoom_widget_enabled = null;
+  private Boolean is_annotation_download_widget_enabled = null;
+  private Boolean is_annotation_print_widget_enabled = null;
+  private Boolean is_annotation_help_widget_enabled = null;
+  private Boolean is_right_panel_enabled = null;
+  private Boolean is_thumbnails_panel_enabled = null;
+  private Boolean is_standard_header_always_shown = null;
+  private Boolean is_toolbar_enabled = null;
+  private Boolean is_text_annotation_button_enabled = null;
+  private Boolean is_rectangle_annotation_button_enabled = null;
+  private Boolean is_point_annotation_button_enabled = null;
+  private Boolean is_strikeout_annotation_button_enabled = null;
+  private Boolean is_polyline_annotation_button_enabled = null;
+  private Boolean is_typewriter_annotation_button_enabled = null;
+  private Boolean is_watermark_annotation_button_enabled = null;
+  private List<Integer> viewer_logo = new ArrayList<Integer>();
+  private Integer viewer_options = null;
+  private Boolean is_viewer_navigation_widget_enabled = null;
+  private Boolean is_viewer_zoom_widget_enabled = null;
+  private Boolean is_viewer_download_widget_enabled = null;
+  private Boolean is_viewer_print_widget_enabled = null;
+  private Boolean is_viewer_help_widget_enabled = null;
   private Long signedupOn = null;
   private Long signedinOn = null;
   private Integer signin_count = null;
@@ -104,10 +133,10 @@ public class UserInfo {
     this.storage = storage;
   }
 
-  public String getPhoto() {
+  public List<Integer> getPhoto() {
     return photo;
   }
-  public void setPhoto(String photo) {
+  public void setPhoto(List<Integer> photo) {
     this.photo = photo;
   }
 
@@ -165,6 +194,209 @@ public class UserInfo {
   }
   public void setViewer_branded(Boolean viewer_branded) {
     this.viewer_branded = viewer_branded;
+  }
+
+  public Boolean getIs_real_time_broadcast_enabled() {
+    return is_real_time_broadcast_enabled;
+  }
+  public void setIs_real_time_broadcast_enabled(Boolean is_real_time_broadcast_enabled) {
+    this.is_real_time_broadcast_enabled = is_real_time_broadcast_enabled;
+  }
+
+  public Boolean getIs_scroll_broadcast_enabled() {
+    return is_scroll_broadcast_enabled;
+  }
+  public void setIs_scroll_broadcast_enabled(Boolean is_scroll_broadcast_enabled) {
+    this.is_scroll_broadcast_enabled = is_scroll_broadcast_enabled;
+  }
+
+  public Boolean getIs_zoom_broadcast_enabled() {
+    return is_zoom_broadcast_enabled;
+  }
+  public void setIs_zoom_broadcast_enabled(Boolean is_zoom_broadcast_enabled) {
+    this.is_zoom_broadcast_enabled = is_zoom_broadcast_enabled;
+  }
+
+  public List<Integer> getAnnotation_logo() {
+    return annotation_logo;
+  }
+  public void setAnnotation_logo(List<Integer> annotation_logo) {
+    this.annotation_logo = annotation_logo;
+  }
+
+  public List<Integer> getPointer_tool_cursor() {
+    return pointer_tool_cursor;
+  }
+  public void setPointer_tool_cursor(List<Integer> pointer_tool_cursor) {
+    this.pointer_tool_cursor = pointer_tool_cursor;
+  }
+
+  public Integer getAnnotation_header_options() {
+    return annotation_header_options;
+  }
+  public void setAnnotation_header_options(Integer annotation_header_options) {
+    this.annotation_header_options = annotation_header_options;
+  }
+
+  public Boolean getIs_annotation_navigation_widget_enabled() {
+    return is_annotation_navigation_widget_enabled;
+  }
+  public void setIs_annotation_navigation_widget_enabled(Boolean is_annotation_navigation_widget_enabled) {
+    this.is_annotation_navigation_widget_enabled = is_annotation_navigation_widget_enabled;
+  }
+
+  public Boolean getIs_annotation_zoom_widget_enabled() {
+    return is_annotation_zoom_widget_enabled;
+  }
+  public void setIs_annotation_zoom_widget_enabled(Boolean is_annotation_zoom_widget_enabled) {
+    this.is_annotation_zoom_widget_enabled = is_annotation_zoom_widget_enabled;
+  }
+
+  public Boolean getIs_annotation_download_widget_enabled() {
+    return is_annotation_download_widget_enabled;
+  }
+  public void setIs_annotation_download_widget_enabled(Boolean is_annotation_download_widget_enabled) {
+    this.is_annotation_download_widget_enabled = is_annotation_download_widget_enabled;
+  }
+
+  public Boolean getIs_annotation_print_widget_enabled() {
+    return is_annotation_print_widget_enabled;
+  }
+  public void setIs_annotation_print_widget_enabled(Boolean is_annotation_print_widget_enabled) {
+    this.is_annotation_print_widget_enabled = is_annotation_print_widget_enabled;
+  }
+
+  public Boolean getIs_annotation_help_widget_enabled() {
+    return is_annotation_help_widget_enabled;
+  }
+  public void setIs_annotation_help_widget_enabled(Boolean is_annotation_help_widget_enabled) {
+    this.is_annotation_help_widget_enabled = is_annotation_help_widget_enabled;
+  }
+
+  public Boolean getIs_right_panel_enabled() {
+    return is_right_panel_enabled;
+  }
+  public void setIs_right_panel_enabled(Boolean is_right_panel_enabled) {
+    this.is_right_panel_enabled = is_right_panel_enabled;
+  }
+
+  public Boolean getIs_thumbnails_panel_enabled() {
+    return is_thumbnails_panel_enabled;
+  }
+  public void setIs_thumbnails_panel_enabled(Boolean is_thumbnails_panel_enabled) {
+    this.is_thumbnails_panel_enabled = is_thumbnails_panel_enabled;
+  }
+
+  public Boolean getIs_standard_header_always_shown() {
+    return is_standard_header_always_shown;
+  }
+  public void setIs_standard_header_always_shown(Boolean is_standard_header_always_shown) {
+    this.is_standard_header_always_shown = is_standard_header_always_shown;
+  }
+
+  public Boolean getIs_toolbar_enabled() {
+    return is_toolbar_enabled;
+  }
+  public void setIs_toolbar_enabled(Boolean is_toolbar_enabled) {
+    this.is_toolbar_enabled = is_toolbar_enabled;
+  }
+
+  public Boolean getIs_text_annotation_button_enabled() {
+    return is_text_annotation_button_enabled;
+  }
+  public void setIs_text_annotation_button_enabled(Boolean is_text_annotation_button_enabled) {
+    this.is_text_annotation_button_enabled = is_text_annotation_button_enabled;
+  }
+
+  public Boolean getIs_rectangle_annotation_button_enabled() {
+    return is_rectangle_annotation_button_enabled;
+  }
+  public void setIs_rectangle_annotation_button_enabled(Boolean is_rectangle_annotation_button_enabled) {
+    this.is_rectangle_annotation_button_enabled = is_rectangle_annotation_button_enabled;
+  }
+
+  public Boolean getIs_point_annotation_button_enabled() {
+    return is_point_annotation_button_enabled;
+  }
+  public void setIs_point_annotation_button_enabled(Boolean is_point_annotation_button_enabled) {
+    this.is_point_annotation_button_enabled = is_point_annotation_button_enabled;
+  }
+
+  public Boolean getIs_strikeout_annotation_button_enabled() {
+    return is_strikeout_annotation_button_enabled;
+  }
+  public void setIs_strikeout_annotation_button_enabled(Boolean is_strikeout_annotation_button_enabled) {
+    this.is_strikeout_annotation_button_enabled = is_strikeout_annotation_button_enabled;
+  }
+
+  public Boolean getIs_polyline_annotation_button_enabled() {
+    return is_polyline_annotation_button_enabled;
+  }
+  public void setIs_polyline_annotation_button_enabled(Boolean is_polyline_annotation_button_enabled) {
+    this.is_polyline_annotation_button_enabled = is_polyline_annotation_button_enabled;
+  }
+
+  public Boolean getIs_typewriter_annotation_button_enabled() {
+    return is_typewriter_annotation_button_enabled;
+  }
+  public void setIs_typewriter_annotation_button_enabled(Boolean is_typewriter_annotation_button_enabled) {
+    this.is_typewriter_annotation_button_enabled = is_typewriter_annotation_button_enabled;
+  }
+
+  public Boolean getIs_watermark_annotation_button_enabled() {
+    return is_watermark_annotation_button_enabled;
+  }
+  public void setIs_watermark_annotation_button_enabled(Boolean is_watermark_annotation_button_enabled) {
+    this.is_watermark_annotation_button_enabled = is_watermark_annotation_button_enabled;
+  }
+
+  public List<Integer> getViewer_logo() {
+    return viewer_logo;
+  }
+  public void setViewer_logo(List<Integer> viewer_logo) {
+    this.viewer_logo = viewer_logo;
+  }
+
+  public Integer getViewer_options() {
+    return viewer_options;
+  }
+  public void setViewer_options(Integer viewer_options) {
+    this.viewer_options = viewer_options;
+  }
+
+  public Boolean getIs_viewer_navigation_widget_enabled() {
+    return is_viewer_navigation_widget_enabled;
+  }
+  public void setIs_viewer_navigation_widget_enabled(Boolean is_viewer_navigation_widget_enabled) {
+    this.is_viewer_navigation_widget_enabled = is_viewer_navigation_widget_enabled;
+  }
+
+  public Boolean getIs_viewer_zoom_widget_enabled() {
+    return is_viewer_zoom_widget_enabled;
+  }
+  public void setIs_viewer_zoom_widget_enabled(Boolean is_viewer_zoom_widget_enabled) {
+    this.is_viewer_zoom_widget_enabled = is_viewer_zoom_widget_enabled;
+  }
+
+  public Boolean getIs_viewer_download_widget_enabled() {
+    return is_viewer_download_widget_enabled;
+  }
+  public void setIs_viewer_download_widget_enabled(Boolean is_viewer_download_widget_enabled) {
+    this.is_viewer_download_widget_enabled = is_viewer_download_widget_enabled;
+  }
+
+  public Boolean getIs_viewer_print_widget_enabled() {
+    return is_viewer_print_widget_enabled;
+  }
+  public void setIs_viewer_print_widget_enabled(Boolean is_viewer_print_widget_enabled) {
+    this.is_viewer_print_widget_enabled = is_viewer_print_widget_enabled;
+  }
+
+  public Boolean getIs_viewer_help_widget_enabled() {
+    return is_viewer_help_widget_enabled;
+  }
+  public void setIs_viewer_help_widget_enabled(Boolean is_viewer_help_widget_enabled) {
+    this.is_viewer_help_widget_enabled = is_viewer_help_widget_enabled;
   }
 
   public Long getSignedupOn() {
@@ -237,6 +469,35 @@ public class UserInfo {
     sb.append("  support_email: ").append(support_email).append("\n");
     sb.append("  annotation_branded: ").append(annotation_branded).append("\n");
     sb.append("  viewer_branded: ").append(viewer_branded).append("\n");
+    sb.append("  is_real_time_broadcast_enabled: ").append(is_real_time_broadcast_enabled).append("\n");
+    sb.append("  is_scroll_broadcast_enabled: ").append(is_scroll_broadcast_enabled).append("\n");
+    sb.append("  is_zoom_broadcast_enabled: ").append(is_zoom_broadcast_enabled).append("\n");
+    sb.append("  annotation_logo: ").append(annotation_logo).append("\n");
+    sb.append("  pointer_tool_cursor: ").append(pointer_tool_cursor).append("\n");
+    sb.append("  annotation_header_options: ").append(annotation_header_options).append("\n");
+    sb.append("  is_annotation_navigation_widget_enabled: ").append(is_annotation_navigation_widget_enabled).append("\n");
+    sb.append("  is_annotation_zoom_widget_enabled: ").append(is_annotation_zoom_widget_enabled).append("\n");
+    sb.append("  is_annotation_download_widget_enabled: ").append(is_annotation_download_widget_enabled).append("\n");
+    sb.append("  is_annotation_print_widget_enabled: ").append(is_annotation_print_widget_enabled).append("\n");
+    sb.append("  is_annotation_help_widget_enabled: ").append(is_annotation_help_widget_enabled).append("\n");
+    sb.append("  is_right_panel_enabled: ").append(is_right_panel_enabled).append("\n");
+    sb.append("  is_thumbnails_panel_enabled: ").append(is_thumbnails_panel_enabled).append("\n");
+    sb.append("  is_standard_header_always_shown: ").append(is_standard_header_always_shown).append("\n");
+    sb.append("  is_toolbar_enabled: ").append(is_toolbar_enabled).append("\n");
+    sb.append("  is_text_annotation_button_enabled: ").append(is_text_annotation_button_enabled).append("\n");
+    sb.append("  is_rectangle_annotation_button_enabled: ").append(is_rectangle_annotation_button_enabled).append("\n");
+    sb.append("  is_point_annotation_button_enabled: ").append(is_point_annotation_button_enabled).append("\n");
+    sb.append("  is_strikeout_annotation_button_enabled: ").append(is_strikeout_annotation_button_enabled).append("\n");
+    sb.append("  is_polyline_annotation_button_enabled: ").append(is_polyline_annotation_button_enabled).append("\n");
+    sb.append("  is_typewriter_annotation_button_enabled: ").append(is_typewriter_annotation_button_enabled).append("\n");
+    sb.append("  is_watermark_annotation_button_enabled: ").append(is_watermark_annotation_button_enabled).append("\n");
+    sb.append("  viewer_logo: ").append(viewer_logo).append("\n");
+    sb.append("  viewer_options: ").append(viewer_options).append("\n");
+    sb.append("  is_viewer_navigation_widget_enabled: ").append(is_viewer_navigation_widget_enabled).append("\n");
+    sb.append("  is_viewer_zoom_widget_enabled: ").append(is_viewer_zoom_widget_enabled).append("\n");
+    sb.append("  is_viewer_download_widget_enabled: ").append(is_viewer_download_widget_enabled).append("\n");
+    sb.append("  is_viewer_print_widget_enabled: ").append(is_viewer_print_widget_enabled).append("\n");
+    sb.append("  is_viewer_help_widget_enabled: ").append(is_viewer_help_widget_enabled).append("\n");
     sb.append("  signedupOn: ").append(signedupOn).append("\n");
     sb.append("  signedinOn: ").append(signedinOn).append("\n");
     sb.append("  signin_count: ").append(signin_count).append("\n");

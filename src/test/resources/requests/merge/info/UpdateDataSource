@@ -1,7 +1,0 @@
-PUT /v2.0/merge/ea103bbe8cb8ce07/datasources/12301?signature=uC801TlWTO%2FlqWrwFQUiZ9xwQCM
-
-Host: dev-api.groupdocs.com
-Accept: application/json
-Content-Length: 135
-Groupdocs-Referrer: ruby/1.2.0
-Content-Type: application/json

@@ -25,7 +25,7 @@ import com.groupdocs.sdk.model.DocumentDetailsResponse;
 import java.util.*;
 
 public class ComparisonApi {
-  String basePath = "https://api.groupdocs.com/v2.0";
+  String basePath = "https://dev-api.groupdocs.com/v2.0";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public ApiInvoker getInvoker() {
@@ -40,38 +40,6 @@ public class ComparisonApi {
     return basePath;
   }
 
-  public FileStream DownloadResult (String userId, String resultFileId, String format) throws ApiException {
-    // verify required params are set
-    if(userId == null || resultFileId == null ) {
-       throw new ApiException(400, "missing required params");
-    }
-    String resourcePath = "/comparison/{userId}/comparison/download?resultFileId={resultFileId}&format={format}".replace("*", "");
-  	int pos = resourcePath.indexOf("?");
-  	if(pos > -1){
-  		resourcePath = resourcePath.substring(0, pos);
-  	}
-  	// create path and map variables
-    resourcePath = resourcePath.replace("{format}","json").replace("{" + "userId" + "}", String.valueOf(userId));
-
-    // query params
-    Map<String, String> queryParams = new HashMap<String, String>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-
-    if(!"null".equals(String.valueOf(resultFileId)))
-      queryParams.put("resultFileId", String.valueOf(resultFileId));
-    if(!"null".equals(String.valueOf(format)))
-      queryParams.put("format", String.valueOf(format));
-    try {
-      return apiInvoker.invokeAPI(basePath, resourcePath, "GET", queryParams, null, headerParams, FileStream.class);
-      } catch (ApiException ex) {
-      if(ex.getCode() == 404) {
-      	return null;
-      }
-      else {
-        throw ex;
-      }
-    }
-  }
   public CompareResponse Compare (String userId, String sourceFileId, String targetFileId, String callbackUrl) throws ApiException {
     // verify required params are set
     if(userId == null || sourceFileId == null || targetFileId == null || callbackUrl == null ) {
@@ -211,6 +179,38 @@ public class ComparisonApi {
       else {
         return null;
       }
+      } catch (ApiException ex) {
+      if(ex.getCode() == 404) {
+      	return null;
+      }
+      else {
+        throw ex;
+      }
+    }
+  }
+  public FileStream DownloadResult (String userId, String resultFileId, String format) throws ApiException {
+    // verify required params are set
+    if(userId == null || resultFileId == null ) {
+       throw new ApiException(400, "missing required params");
+    }
+    String resourcePath = "/comparison/{userId}/comparison/download?resultFileId={resultFileId}&format={format}".replace("*", "");
+  	int pos = resourcePath.indexOf("?");
+  	if(pos > -1){
+  		resourcePath = resourcePath.substring(0, pos);
+  	}
+  	// create path and map variables
+    resourcePath = resourcePath.replace("{format}","json").replace("{" + "userId" + "}", String.valueOf(userId));
+
+    // query params
+    Map<String, String> queryParams = new HashMap<String, String>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+
+    if(!"null".equals(String.valueOf(resultFileId)))
+      queryParams.put("resultFileId", String.valueOf(resultFileId));
+    if(!"null".equals(String.valueOf(format)))
+      queryParams.put("format", String.valueOf(format));
+    try {
+      return apiInvoker.invokeAPI(basePath, resourcePath, "GET", queryParams, null, headerParams, FileStream.class);
       } catch (ApiException ex) {
       if(ex.getCode() == 404) {
       	return null;

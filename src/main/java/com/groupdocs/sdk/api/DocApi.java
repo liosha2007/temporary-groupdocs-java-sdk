@@ -36,7 +36,7 @@ import com.groupdocs.sdk.model.GetImageUrlsResponse;
 import java.util.*;
 
 public class DocApi {
-  String basePath = "https://api.groupdocs.com/v2.0";
+  String basePath = "https://dev-api.groupdocs.com/v2.0";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public ApiInvoker getInvoker() {

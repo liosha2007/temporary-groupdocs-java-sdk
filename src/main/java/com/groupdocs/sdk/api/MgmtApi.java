@@ -40,7 +40,7 @@ import com.groupdocs.sdk.model.GetAccountUsersResponse;
 import java.util.*;
 
 public class MgmtApi {
-  String basePath = "https://api.groupdocs.com/v2.0";
+  String basePath = "https://dev-api.groupdocs.com/v2.0";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public ApiInvoker getInvoker() {

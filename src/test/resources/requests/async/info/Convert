@@ -1,6 +1,0 @@
-POST /v2.0/async/ea103bbe8cb8ce07/files/6ffb912cd6754ab1fa8a1878d6768ba9d97735f9f6561670fb2e59e0dc7cff83?emails_results=false&new_type=doc&signature=fra70BThy9eU9vmhEoDpvCfnR6I
-
-Host: dev-api.groupdocs.com
-Accept: application/json
-Content-Length: 0
-Groupdocs-Referrer: ruby/1.2.0

@@ -37,6 +37,7 @@ public class SignatureEnvelopeRecipientInfo {
   private String signatureHost = null;
   private String signatureLocation = null;
   private String signatureBrowser = null;
+  private String embedUrl = null;
   public String getId() {
     return id;
   }
@@ -142,6 +143,13 @@ public class SignatureEnvelopeRecipientInfo {
     this.signatureBrowser = signatureBrowser;
   }
 
+  public String getEmbedUrl() {
+    return embedUrl;
+  }
+  public void setEmbedUrl(String embedUrl) {
+    this.embedUrl = embedUrl;
+  }
+
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
@@ -161,6 +169,7 @@ public class SignatureEnvelopeRecipientInfo {
     sb.append("  signatureHost: ").append(signatureHost).append("\n");
     sb.append("  signatureLocation: ").append(signatureLocation).append("\n");
     sb.append("  signatureBrowser: ").append(signatureBrowser).append("\n");
+    sb.append("  embedUrl: ").append(embedUrl).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

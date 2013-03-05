@@ -26,6 +26,8 @@ public class StorageInfoResult {
   private Long avail_space = null;
   private Integer doc_credits = null;
   private Integer avail_credits = null;
+  private Integer total_documents = null;
+  private Long avail_documents = null;
   public Long getTotal_space() {
     return total_space;
   }
@@ -54,6 +56,20 @@ public class StorageInfoResult {
     this.avail_credits = avail_credits;
   }
 
+  public Integer getTotal_documents() {
+    return total_documents;
+  }
+  public void setTotal_documents(Integer total_documents) {
+    this.total_documents = total_documents;
+  }
+
+  public Long getAvail_documents() {
+    return avail_documents;
+  }
+  public void setAvail_documents(Long avail_documents) {
+    this.avail_documents = avail_documents;
+  }
+
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
@@ -62,6 +78,8 @@ public class StorageInfoResult {
     sb.append("  avail_space: ").append(avail_space).append("\n");
     sb.append("  doc_credits: ").append(doc_credits).append("\n");
     sb.append("  avail_credits: ").append(avail_credits).append("\n");
+    sb.append("  total_documents: ").append(total_documents).append("\n");
+    sb.append("  avail_documents: ").append(avail_documents).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -1,6 +1,0 @@
-PUT /v2.0/doc/ea103bbe8cb8ce07/files/157128/accessinfo?mode=0&signature=MpOgQUDusL27c9AkpQrNgVIQajI
-
-Host: dev-api.groupdocs.com
-Accept: application/json
-Content-Length: 0
-Groupdocs-Referrer: ruby/1.2.0

@@ -1,6 +1,0 @@
-GET /v2.0/ant/ea103bbe8cb8ce07/files/54dc0c83767a89ae571633337ae783e60aa30ce35b519de313bd9db4b2049375/collaborators?signature=2GzmaUUU9grDJYyjTpbiSW06YRo
-
-Host: dev-api.groupdocs.com
-Accept: application/json
-Content-Length: 0
-Groupdocs-Referrer: ruby/1.2.0

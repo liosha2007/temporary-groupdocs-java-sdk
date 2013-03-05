@@ -28,6 +28,7 @@ public class UploadRequestResult {
   private String file_type = null;
   private Long size = null;
   private Integer version = null;
+  private Double view_job_id = null;
   private String thumbnail = null;
   private Double id = null;
   private String guid = null;
@@ -73,6 +74,13 @@ public class UploadRequestResult {
     this.version = version;
   }
 
+  public Double getView_job_id() {
+    return view_job_id;
+  }
+  public void setView_job_id(Double view_job_id) {
+    this.view_job_id = view_job_id;
+  }
+
   public String getThumbnail() {
     return thumbnail;
   }
@@ -104,6 +112,7 @@ public class UploadRequestResult {
     sb.append("  file_type: ").append(file_type).append("\n");
     sb.append("  size: ").append(size).append("\n");
     sb.append("  version: ").append(version).append("\n");
+    sb.append("  view_job_id: ").append(view_job_id).append("\n");
     sb.append("  thumbnail: ").append(thumbnail).append("\n");
     sb.append("  id: ").append(id).append("\n");
     sb.append("  guid: ").append(guid).append("\n");

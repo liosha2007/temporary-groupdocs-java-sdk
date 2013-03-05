@@ -1,6 +1,0 @@
-GET /v2.0/ant/ea103bbe8cb8ce07/annotations/843af79882f57470/replies?signature=HphP9%2FM7qmzZYnu5N%2Fsj6p2%2B%2Ff4
-
-Host: dev-api.groupdocs.com
-Accept: application/json
-Content-Length: 0
-Groupdocs-Referrer: ruby/1.2.0

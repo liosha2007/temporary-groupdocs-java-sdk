@@ -39,6 +39,7 @@ public class AnnotationInfo {
   private String access = null;
   private List<AnnotationReplyInfo> replies = new ArrayList<AnnotationReplyInfo>();
   private Long createdOn = null;
+  private Integer fontColor = null;
   private String fieldText = null;
   private String fontFamily = null;
   private Double fontSize = null;
@@ -126,6 +127,13 @@ public class AnnotationInfo {
     this.createdOn = createdOn;
   }
 
+  public Integer getFontColor() {
+    return fontColor;
+  }
+  public void setFontColor(Integer fontColor) {
+    this.fontColor = fontColor;
+  }
+
   public String getFieldText() {
     return fieldText;
   }
@@ -163,6 +171,7 @@ public class AnnotationInfo {
     sb.append("  access: ").append(access).append("\n");
     sb.append("  replies: ").append(replies).append("\n");
     sb.append("  createdOn: ").append(createdOn).append("\n");
+    sb.append("  fontColor: ").append(fontColor).append("\n");
     sb.append("  fieldText: ").append(fieldText).append("\n");
     sb.append("  fontFamily: ").append(fontFamily).append("\n");
     sb.append("  fontSize: ").append(fontSize).append("\n");

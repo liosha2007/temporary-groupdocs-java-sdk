@@ -1,7 +1,0 @@
-PUT /v2.0/storage/ea103bbe8cb8ce07/folders/NewFolder-6087908377328016?signature=eqj%2BAW5JcO%2BCWuMMTpNuYYdnzfE
-
-Host: dev-api.groupdocs.com
-Groupdocs-copy: Folder-6087908377328016
-Accept: application/json
-Content-Length: 0
-Groupdocs-Referrer: ruby/1.2.0

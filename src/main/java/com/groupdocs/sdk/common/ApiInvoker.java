@@ -37,12 +37,7 @@ import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource.Builder;
-import com.sun.jersey.api.client.config.ClientConfig;
-import com.sun.jersey.api.client.config.DefaultClientConfig;
 import com.sun.jersey.api.client.filter.LoggingFilter;
-import com.sun.jersey.client.apache4.ApacheHttpClient4;
-import com.sun.jersey.client.apache4.config.DefaultApacheHttpClient4Config;
-import com.sun.jersey.core.header.MediaTypes;
 import com.wordnik.swagger.core.util.JsonUtil;
 
 public class ApiInvoker {
@@ -197,7 +192,7 @@ public class ApiInvoker {
     }
     
     String requestUri = encodeURI(signer.signUrl(host + path + querystring)); //TODO incorrect for redirects
-	Builder builder = client.resource(requestUri).accept(MediaTypes.GENERAL_ACCEPT_MEDIA_TYPE).type(contentType);
+	Builder builder = client.resource(requestUri).type(contentType);
 	builder.header("Groupdocs-Referer", PACKAGE_NAME + "/" + PACKAGE_VERSION);	
     for(String key : headerParams.keySet()) {
     	builder.header(key, headerParams.get(key));
@@ -269,11 +264,7 @@ public class ApiInvoker {
   
   private Client getClient(String host) {
 	if(!hostMap.containsKey(host)) {
-		ClientConfig cfg = new DefaultApacheHttpClient4Config();
-		int oneMb = 1024 * 1024;
-		cfg.getProperties().put(DefaultApacheHttpClient4Config.PROPERTY_CHUNKED_ENCODING_SIZE, oneMb);
-		Client client = ApacheHttpClient4.create(cfg);
-		
+		Client client = Client.create();
 		if(isDebug){
 			client.addFilter(new LoggingFilter());
 		}

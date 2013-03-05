@@ -28,7 +28,7 @@ public class QuestionnaireCollectorInfo {
   private String type = null;
   private String status = null;
   private Double questionnaire_id = null;
-  private Integer resolved_exectuions = null;
+  private Integer resolved_executions = null;
   private List<String> emails = new ArrayList<String>();
   private Long modified = null;
   public Double getId() {
@@ -66,11 +66,11 @@ public class QuestionnaireCollectorInfo {
     this.questionnaire_id = questionnaire_id;
   }
 
-  public Integer getResolved_exectuions() {
-    return resolved_exectuions;
+  public Integer getResolved_executions() {
+    return resolved_executions;
   }
-  public void setResolved_exectuions(Integer resolved_exectuions) {
-    this.resolved_exectuions = resolved_exectuions;
+  public void setResolved_executions(Integer resolved_executions) {
+    this.resolved_executions = resolved_executions;
   }
 
   public List<String> getEmails() {
@@ -96,7 +96,7 @@ public class QuestionnaireCollectorInfo {
     sb.append("  type: ").append(type).append("\n");
     sb.append("  status: ").append(status).append("\n");
     sb.append("  questionnaire_id: ").append(questionnaire_id).append("\n");
-    sb.append("  resolved_exectuions: ").append(resolved_exectuions).append("\n");
+    sb.append("  resolved_executions: ").append(resolved_executions).append("\n");
     sb.append("  emails: ").append(emails).append("\n");
     sb.append("  modified: ").append(modified).append("\n");
     sb.append("}\n");

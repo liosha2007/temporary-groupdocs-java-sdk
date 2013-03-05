@@ -36,6 +36,8 @@ public class QuestionnaireInfo {
   private Integer total_questions = null;
   private Long modified = null;
   private Long expires = null;
+  private String folder = null;
+  private String emails = null;
   public Integer getResolved_executions() {
     return resolved_executions;
   }
@@ -120,6 +122,20 @@ public class QuestionnaireInfo {
     this.expires = expires;
   }
 
+  public String getFolder() {
+    return folder;
+  }
+  public void setFolder(String folder) {
+    this.folder = folder;
+  }
+
+  public String getEmails() {
+    return emails;
+  }
+  public void setEmails(String emails) {
+    this.emails = emails;
+  }
+
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
@@ -136,6 +152,8 @@ public class QuestionnaireInfo {
     sb.append("  total_questions: ").append(total_questions).append("\n");
     sb.append("  modified: ").append(modified).append("\n");
     sb.append("  expires: ").append(expires).append("\n");
+    sb.append("  folder: ").append(folder).append("\n");
+    sb.append("  emails: ").append(emails).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

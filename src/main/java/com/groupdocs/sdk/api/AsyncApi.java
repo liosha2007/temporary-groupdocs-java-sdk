@@ -32,7 +32,7 @@ import com.groupdocs.sdk.model.GetJobsResponse;
 import java.util.*;
 
 public class AsyncApi {
-  String basePath = "https://api.groupdocs.com/v2.0";
+  String basePath = "https://dev-api.groupdocs.com/v2.0";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public ApiInvoker getInvoker() {
@@ -52,7 +52,7 @@ public class AsyncApi {
     if(userId == null || jobId == null ) {
        throw new ApiException(400, "missing required params");
     }
-    String resourcePath = "/async/{userId}/jobs/{jobId}".replace("*", "");
+    String resourcePath = "/async/{userId}/jobs/{jobId}?format=xml".replace("*", "");
   	// create path and map variables
     resourcePath = resourcePath.replace("{format}","json").replace("{" + "userId" + "}", String.valueOf(userId)).replace("{" + "jobId" + "}", String.valueOf(jobId));
 
@@ -471,12 +471,12 @@ public class AsyncApi {
       }
     }
   }
-  public ConvertResponse Convert (String userId, String fileId, String targetType, String emailResults, String description, Boolean printScript, String callbackUrl, Boolean checkDocumentOwnership) throws ApiException {
+  public ConvertResponse Convert (String userId, String fileId, String emailResults, String description, Boolean printScript, String callbackUrl, String new_type) throws ApiException {
     // verify required params are set
     if(userId == null || fileId == null ) {
        throw new ApiException(400, "missing required params");
     }
-    String resourcePath = "/async/{userId}/files/{fileId}?new_type={targetType}&email_results={emailResults}&new_description={description}&print_script={printScript}&callback={callbackUrl}&checkDocumentOwnership={checkDocumentOwnership}".replace("*", "");
+    String resourcePath = "/async/{userId}/files/{fileId}?new_type={targetType}&email_results={emailResults}&new_description={description}&print_script={printScript}&callback={callbackUrl}".replace("*", "");
   	int pos = resourcePath.indexOf("?");
   	if(pos > -1){
   		resourcePath = resourcePath.substring(0, pos);
@@ -488,8 +488,6 @@ public class AsyncApi {
     Map<String, String> queryParams = new HashMap<String, String>();
     Map<String, String> headerParams = new HashMap<String, String>();
 
-    if(!"null".equals(String.valueOf(targetType)))
-      queryParams.put("new_type", String.valueOf(targetType));
     if(!"null".equals(String.valueOf(emailResults)))
       queryParams.put("email_results", String.valueOf(emailResults));
     if(!"null".equals(String.valueOf(description)))
@@ -498,8 +496,8 @@ public class AsyncApi {
       queryParams.put("print_script", String.valueOf(printScript));
     if(!"null".equals(String.valueOf(callbackUrl)))
       queryParams.put("callback", String.valueOf(callbackUrl));
-    if(!"null".equals(String.valueOf(checkDocumentOwnership)))
-      queryParams.put("checkDocumentOwnership", String.valueOf(checkDocumentOwnership));
+    if(!"null".equals(String.valueOf(new_type)))
+      queryParams.put("new_type", String.valueOf(new_type));
     try {
       String response = apiInvoker.invokeAPI(basePath, resourcePath, "POST", queryParams, null, headerParams, String.class);
       if(response != null){

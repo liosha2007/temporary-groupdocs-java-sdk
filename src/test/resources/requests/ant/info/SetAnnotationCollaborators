@@ -1,7 +1,0 @@
-PUT /v2.0/ant/ea103bbe8cb8ce07/files/bb501cf42d44e459d11216b89d665c486b7f5229b444e213817a6d98bb525aa1/version/1/collaborators?signature=S8oM13XTWstUN5a%2FKvXemGwqWXs
-
-Host: dev-api.groupdocs.com
-Accept: application/json
-Content-Length: 53
-Groupdocs-Referrer: ruby/1.2.0
-Content-Type: application/json

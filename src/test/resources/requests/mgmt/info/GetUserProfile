@@ -1,6 +1,0 @@
-GET /v2.0/mgmt/ea103bbe8cb8ce07/profile?signature=PDluqmiB%2B56taXY9r8Yxpj5AGO4
-
-Host: dev-api.groupdocs.com
-Accept: application/json
-Content-Length: 0
-Groupdocs-Referrer: ruby/1.2.0

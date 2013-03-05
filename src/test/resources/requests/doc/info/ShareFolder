@@ -1,7 +1,0 @@
-PUT /v2.0/doc/ea103bbe8cb8ce07/folders/88184/sharers?signature=craoXXiR1JJlK9O8ZlXvlAWk0nw
-
-Host: dev-api.groupdocs.com
-Accept: application/json
-Content-Length: 55
-Groupdocs-Referrer: ruby/1.2.0
-Content-Type: application/json

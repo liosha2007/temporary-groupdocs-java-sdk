@@ -17,7 +17,6 @@ package com.groupdocs.sdk.api;
 
 import com.groupdocs.sdk.common.ApiException;
 import com.groupdocs.sdk.common.ApiInvoker;
-import com.groupdocs.sdk.model.TextFieldInfo;
 import com.groupdocs.sdk.model.AddCollaboratorResponse;
 import com.groupdocs.sdk.model.SaveAnnotationTextResponse;
 import com.groupdocs.sdk.model.AnnotationInfo;
@@ -26,25 +25,28 @@ import com.groupdocs.sdk.model.Point;
 import com.groupdocs.sdk.model.GetReviewerContactsResponse;
 import com.groupdocs.sdk.model.DeleteReplyResponse;
 import com.groupdocs.sdk.model.DeleteAnnotationResponse;
-import com.groupdocs.sdk.model.CreateAnnotationResponse;
 import com.groupdocs.sdk.model.EditReplyResponse;
+import com.groupdocs.sdk.model.CreateAnnotationResponse;
 import com.groupdocs.sdk.model.SetCollaboratorsResponse;
+import com.groupdocs.sdk.model.AnnotationSizeInfo;
 import com.groupdocs.sdk.model.SetSharedLinkAccessRightsResponse;
 import com.groupdocs.sdk.model.SetSessionCallbackUrlResponse;
+import com.groupdocs.sdk.model.ResizeAnnotationResponse;
 import com.groupdocs.sdk.model.SetAnnotationAccessResponse;
-import com.groupdocs.sdk.model.ReviewerContactInfo;
 import com.groupdocs.sdk.model.MoveAnnotationResponse;
+import com.groupdocs.sdk.model.ReviewerContactInfo;
 import com.groupdocs.sdk.model.SetReviewerRightsResponse;
 import com.groupdocs.sdk.model.ListAnnotationsResponse;
-import com.groupdocs.sdk.model.GetCollaboratorsResponse;
 import com.groupdocs.sdk.model.ReviewerInfo;
+import com.groupdocs.sdk.model.GetCollaboratorsResponse;
 import com.groupdocs.sdk.model.AnnotationReplyInfo;
 import com.groupdocs.sdk.model.ListRepliesResponse;
+import com.groupdocs.sdk.model.TextFieldInfo;
 import com.groupdocs.sdk.model.AddReplyResponse;
 import java.util.*;
 
 public class AntApi {
-  String basePath = "https://api.groupdocs.com/v2.0";
+  String basePath = "https://dev-api.groupdocs.com/v2.0";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public ApiInvoker getInvoker() {
@@ -485,6 +487,36 @@ public class AntApi {
       }
     }
   }
+  public ResizeAnnotationResponse ResizeAnnotation (String userId, String annotationId, AnnotationSizeInfo body) throws ApiException {
+    // verify required params are set
+    if(userId == null || annotationId == null || body == null ) {
+       throw new ApiException(400, "missing required params");
+    }
+    String resourcePath = "/ant/{userId}/annotations/{annotationId}/size".replace("*", "");
+  	// create path and map variables
+    resourcePath = resourcePath.replace("{format}","json").replace("{" + "userId" + "}", String.valueOf(userId)).replace("{" + "annotationId" + "}", String.valueOf(annotationId));
+
+    // query params
+    Map<String, String> queryParams = new HashMap<String, String>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, resourcePath, "PUT", queryParams, body, headerParams, String.class);
+      if(response != null){
+        return (ResizeAnnotationResponse) ApiInvoker.deserialize(response, "", ResizeAnnotationResponse.class);
+      }
+      else {
+        return null;
+      }
+      } catch (ApiException ex) {
+      if(ex.getCode() == 404) {
+      	return null;
+      }
+      else {
+        throw ex;
+      }
+    }
+  }
   public SetAnnotationAccessResponse SetAnnotationAccess (String userId, String annotationId, Integer body) throws ApiException {
     // verify required params are set
     if(userId == null || annotationId == null || body == null ) {
@@ -671,6 +703,36 @@ public class AntApi {
        throw new ApiException(400, "missing required params");
     }
     String resourcePath = "/ant/{userId}/annotations/{annotationId}/textFieldInfo".replace("*", "");
+  	// create path and map variables
+    resourcePath = resourcePath.replace("{format}","json").replace("{" + "userId" + "}", String.valueOf(userId)).replace("{" + "annotationId" + "}", String.valueOf(annotationId));
+
+    // query params
+    Map<String, String> queryParams = new HashMap<String, String>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, resourcePath, "PUT", queryParams, body, headerParams, String.class);
+      if(response != null){
+        return (SaveAnnotationTextResponse) ApiInvoker.deserialize(response, "", SaveAnnotationTextResponse.class);
+      }
+      else {
+        return null;
+      }
+      } catch (ApiException ex) {
+      if(ex.getCode() == 404) {
+      	return null;
+      }
+      else {
+        throw ex;
+      }
+    }
+  }
+  public SaveAnnotationTextResponse SetTextFieldColor (String userId, String annotationId, Integer body) throws ApiException {
+    // verify required params are set
+    if(userId == null || annotationId == null || body == null ) {
+       throw new ApiException(400, "missing required params");
+    }
+    String resourcePath = "/ant/{userId}/annotations/{annotationId}/textFieldColor".replace("*", "");
   	// create path and map variables
     resourcePath = resourcePath.replace("{format}","json").replace("{" + "userId" + "}", String.valueOf(userId)).replace("{" + "annotationId" + "}", String.valueOf(annotationId));
 
