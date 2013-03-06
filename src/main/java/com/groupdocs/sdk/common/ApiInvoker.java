@@ -15,6 +15,9 @@
  */
 package com.groupdocs.sdk.common;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
@@ -28,6 +31,10 @@ import java.util.Properties;
 
 import javax.ws.rs.core.MediaType;
 
+import org.apache.commons.codec.binary.Base64InputStream;
+import org.apache.commons.io.IOUtils;
+import org.apache.sling.commons.mime.internal.MimeTypeServiceImpl;
+
 import com.fasterxml.jackson.core.Version;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JavaType;
@@ -38,6 +45,7 @@ import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource.Builder;
 import com.sun.jersey.api.client.filter.LoggingFilter;
+import com.sun.jersey.multipart.file.DefaultMediaTypePredictor;
 import com.wordnik.swagger.core.util.JsonUtil;
 
 public class ApiInvoker {
@@ -48,6 +56,8 @@ public class ApiInvoker {
   private static final String ENC = "UTF-8";
   private RequestSigner signer;
   private boolean isDebug;
+
+  public static MimeTypeServiceImpl mimeTypeService = new MimeTypeServiceImpl();
 
   public static final String PACKAGE_NAME;
   public static final String PACKAGE_VERSION;
@@ -68,6 +78,11 @@ public class ApiInvoker {
 	}
 	PACKAGE_NAME = prop.getProperty("application.name", "groupdocs-java");
 	PACKAGE_VERSION = prop.getProperty("application.version", "unknown");
+	try {
+		mimeTypeService.registerMimeType(ApiInvoker.class.getResourceAsStream(MimeTypeServiceImpl.CORE_MIME_TYPES));
+	} catch (IOException e) {
+		System.err.println("Failed to initialize MimeTypeServiceImpl");
+	}
   }
   
   public static class CustomDateDeserializer extends DateDeserializer {
@@ -126,7 +141,8 @@ public class ApiInvoker {
 	  }
   }
 
-  public static Object deserialize(String json, String containerType, Class cls) throws ApiException {
+  @SuppressWarnings("unchecked")
+public static Object deserialize(String json, String containerType, @SuppressWarnings("rawtypes") Class cls) throws ApiException {
     try{
       ObjectMapper mapper = JsonUtil.getJsonMapper();
 	  SimpleModule m = new SimpleModule(PACKAGE_NAME, Version.unknownVersion());
@@ -135,7 +151,7 @@ public class ApiInvoker {
       
       if("List".equals(containerType)) {
         JavaType typeInfo = mapper.getTypeFactory().constructCollectionType(List.class, cls);
-        List response = (List<?>) mapper.readValue(json, typeInfo);
+        List<?> response = (List<?>) mapper.readValue(json, typeInfo);
         return response;
       }
       else if(String.class.equals(cls)) {
@@ -164,7 +180,8 @@ public class ApiInvoker {
     }
   }
 
-  public <T> T invokeAPI(String host, String path, String method, Map<String, String> queryParams, Object body, Map<String, String> headerParams, Class<T> returnType) throws ApiException {
+  @SuppressWarnings("unchecked")
+public <T> T invokeAPI(String host, String path, String method, Map<String, String> queryParams, Object body, Map<String, String> headerParams, Class<T> returnType) throws ApiException {
     Client client = getClient(host);
 
     StringBuilder b = new StringBuilder();
@@ -260,6 +277,32 @@ public class ApiInvoker {
     	          response.getClientResponseStatus().getStatusCode(),
     	          errMsg);    	
     }
+  }
+  
+  /**
+   * Read file contents into String according to http://en.wikipedia.org/wiki/Data_URI_scheme#Format
+   * 
+   * @param file
+   * @return
+ * @throws IOException 
+ * @throws FileNotFoundException 
+   * @throws Exception
+   */
+  public static String readAsDataURL(File file) throws IOException  {
+	String mimeType = mimeTypeService.getMimeType(file.getName());
+	if (mimeType == null) {
+		mimeType = new DefaultMediaTypePredictor().getMediaTypeFromFile(file).toString();
+	} 
+	return readAsDataURL(file, mimeType);
+  }
+  
+  public static String readAsDataURL(File file, String contentType) throws IOException  {
+	return readAsDataURL(new FileInputStream(file), contentType);
+  }
+  
+  public static String readAsDataURL(InputStream is, String contentType) throws IOException  {
+	String base64file = IOUtils.toString(new Base64InputStream(is, true, 0, null));
+	return "data:" + contentType + ";base64,"  + base64file;
   }
   
   private Client getClient(String host) {
